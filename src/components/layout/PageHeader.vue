@@ -1,24 +1,15 @@
 <script setup lang="ts">
-import DarkModeButton from '../global/darkModeButton.vue';
+import DarkModeButton from '../global/darkModeButton.vue'
+import LogoutButton  from '../global/logoutButton.vue'
+import SearchBar from '../global/searchBar.vue'
 </script>
 
 <template>
-  <header>
-    <div class="container">
+  <header class="w-full p-2 bg-primary-foreground border-b border-slate-200">
+    <div class="flex align-middle justify-end gap-2">
+      <SearchBar />
+      <LogoutButton/>
       <DarkModeButton/>
     </div>
   </header>
 </template>
-
-<style lang="scss" scoped>
-header {
-  width: 100%;
-  padding: 5px;
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-</style>
