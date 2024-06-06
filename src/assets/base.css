@@ -19,7 +19,7 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
  
-    --primary: 212, 52%, 50%;
+    --primary: 212 52% 50%;
     --primary-foreground: 0 0% 98%;
  
     --secondary: 240 4.8% 95.9%;
@@ -67,8 +67,6 @@
     --ring: 240 4.9% 83.9%;
   }
 }
-
-
  
 @layer base {
   * {
@@ -87,6 +85,9 @@
     @apply my-2;
   }
   a {
-   @apply text-blue-600 underline; 
+    @apply text-blue-600;
+  }
+  a:hover {
+   @apply text-blue-400; 
   }
 }
