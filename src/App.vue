@@ -1,6 +1,6 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import MainLayout from '@/components/layout/mainLayout.vue'
+import MainLayout from '@/components/layouts/MainLayout.vue'
 import { useTitle } from '@vueuse/core'
 
 const title = useTitle()

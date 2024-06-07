@@ -1,7 +1,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
-import Button from '../ui/button/Button.vue';
 import { useLogin } from '@/stores/login'
+import Button from '../ui/button/Button.vue';
 
 const store = useLogin()
 const router = useRouter()
@@ -13,5 +13,5 @@ const logout = () => {
 </script>
 
 <template>
-  <Button @click="logout" size="xs">Logout</Button>
+  <Button @click="logout" size="">Logout</Button>
 </template>

@@ -8,7 +8,7 @@ const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <Button size="xs" class="self-end" @click="toggleDark()" >
+  <Button class="self-end" @click="toggleDark()" >
     <Icon v-if="!isDark" icon="ri:sun-fill" />
     <Icon v-else icon="ri:moon-fill" />
   </Button>

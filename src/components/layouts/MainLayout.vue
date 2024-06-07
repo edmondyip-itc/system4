@@ -1,8 +1,9 @@
 <script setup>
 import { computed, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
-import PageHeader from '@/components/layout/PageHeader.vue'
 import { useLogin } from '@/stores/login'
+import PageHeader from '@/components/layouts/PageHeader.vue'
+import NavBar from '@/components/layouts/MainNav.vue'
 
 const store = useLogin()
 const router = useRouter()
@@ -23,6 +24,7 @@ watchEffect(() => {
   </div>
   <div id="layout" v-else>
     <PageHeader />
+    <NavBar />
     <main>
       <slot>
       </slot>
