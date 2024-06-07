@@ -56,7 +56,7 @@ const onSubmit = () => {
                 </div>
               </FormItem>
             </FormField>
-            <Button type="submit">
+            <Button type="submit" class="w-full">
               Login to System4
             </Button>
           </form>
