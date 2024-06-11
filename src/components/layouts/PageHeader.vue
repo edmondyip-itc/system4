@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import DarkModeButton from '../global/darkModeButton.vue'
-import LogoutButton  from '../global/logoutButton.vue'
-import SearchBar from '../global/searchBar.vue'
+import DarkModeButton from '../global/DarkModeButton.vue'
+import LogoutButton  from '../global/LogoutButton.vue'
+import SearchBar from '../global/SearchBar.vue'
 </script>
 
 <template>
