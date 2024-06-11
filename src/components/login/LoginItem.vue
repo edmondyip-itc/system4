@@ -21,7 +21,7 @@ const onSubmit = () => {
 <template>
   <div id="login">
     <div class="right-card">
-      <Card class="w-[450px]">
+      <Card class="w-[500px]">
         <CardHeader>
           <CardTitle>
             Welcome Back 👋
@@ -74,7 +74,6 @@ const onSubmit = () => {
   #login {
     .right-card {
       padding: 50px;
-      width: 500px;
       margin: auto 0;
       display: flex;
       flex-direction: column;
