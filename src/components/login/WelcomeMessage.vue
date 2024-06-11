@@ -1,6 +1,5 @@
 <script setup>
-import { reactive } from 'vue'
-import ItcLogo from '../icons/itcLogo.vue'
+import ItcLogo from '../icons/ItcLogo.vue'
 import RandomText from './RandomText.vue'
 </script>
 
