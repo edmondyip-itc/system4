@@ -4,7 +4,7 @@ import RandomText from './RandomText.vue'
 </script>
 
 <template>
-  <div id="welcome-message" class="rounded-xl" >
+  <div id="welcome-message" class="rounded-r-3xl" >
     <ItcLogo color="white" />
     <RandomText />
   </div>
@@ -15,7 +15,7 @@ import RandomText from './RandomText.vue'
     padding: 50px;
     text-align: center;
     min-height: 100%;
-    width: 780px;
+    // width: 780px;
     background: url('@/assets/background2.jpg') no-repeat center center;
     background-size: cover;
     display: flex;

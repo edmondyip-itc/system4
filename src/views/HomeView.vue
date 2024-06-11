@@ -1,9 +1,11 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import HomeDashboard from '@/components/home/HomeDashboard.vue'
+import AvatarCard from '@/components/global/AvatarCard.vue'
 </script>
 
 <template>
-  <section>
-    <h1>Dashboard</h1>
+  <section class="p-2">
+    <AvatarCard />
+    <HomeDashboard />
   </section>
 </template>
