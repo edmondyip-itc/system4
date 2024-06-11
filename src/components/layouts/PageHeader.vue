@@ -5,7 +5,7 @@ import SearchBar from '../global/searchBar.vue'
 </script>
 
 <template>
-  <header class="w-full p-2 bg-primary-foreground border-b border-slate-200">
+  <header class="w-full p-2">
     <div class="flex align-middle justify-end gap-2">
       <SearchBar />
       <LogoutButton/>

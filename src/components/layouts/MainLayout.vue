@@ -3,7 +3,7 @@ import { computed, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 import { useLogin } from '@/stores/login'
 import PageHeader from '@/components/layouts/PageHeader.vue'
-import NavBar from '@/components/layouts/MainNav.vue'
+import SideBar from './SideBar.vue'
 
 const store = useLogin()
 const router = useRouter()
@@ -22,12 +22,20 @@ watchEffect(() => {
       </slot>
     </main>
   </div>
-  <div id="layout" v-else>
-    <PageHeader />
-    <NavBar />
+  <div id="layout" class="dashboard h-screen bg-primary-foreground" v-else>
+    <PageHeader class="col-span-4 row-span-1" />
+    <SideBar />
     <main>
       <slot>
       </slot>
     </main>
   </div>
 </template>
+
+<style lang="scss">
+#layout {
+  &.dashboard {
+    @apply grid grid-cols-[200px_minmax(500px,_1fr)] grid-rows-[60px_minmax(500px,_1fr)];
+  }
+}
+</style>
