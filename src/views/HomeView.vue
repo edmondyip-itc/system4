@@ -1,11 +1,11 @@
 <script setup>
 import HomeDashboard from '@/components/home/HomeDashboard.vue'
-import AvatarCard from '@/components/global/AvatarCard.vue'
+import HomeWelcome from '@/components/home/HomeWelcome.vue'
 </script>
 
 <template>
   <section class="p-2">
-    <AvatarCard />
+    <HomeWelcome />
     <HomeDashboard />
   </section>
 </template>

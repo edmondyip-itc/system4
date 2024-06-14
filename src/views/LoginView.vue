@@ -4,7 +4,7 @@ import WelcomeMessage from '../components/login/WelcomeMessage.vue'
 </script>
 
 <template>
-  <section class="bg-primary-foreground h-screen w-full flex justify-center items-stretch">
+  <section class="bg-primary-foreground h-screen w-screen flex">
     <WelcomeMessage />
     <LoginItem />
   </section>
