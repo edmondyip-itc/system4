@@ -15,7 +15,6 @@ import RandomText from './RandomText.vue'
     padding: 50px;
     text-align: center;
     min-height: 100%;
-    // width: 780px;
     background: url('@/assets/background2.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
