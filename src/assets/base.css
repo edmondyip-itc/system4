@@ -14,13 +14,13 @@
     --popover-foreground: 240 10% 3.9%;
  
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 240 15% 20%;
  
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
  
     --primary: 212 73% 58%;
-    --primary-foreground: 212 81% 90%;
+    --primary-foreground: 214 100% 97%;
  
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
@@ -32,6 +32,7 @@
     --destructive-foreground: 0 0% 98%;
  
     --ring: 240 10% 3.9%;
+    --title-color: 240 6% 38%;
  
     --radius: 0.5rem;
   }
@@ -53,7 +54,7 @@
     --input: 240 3.7% 15.9%;
  
     --primary: 0 0% 98%;
-    --primary-foreground: 240 6% 20%;
+    --primary-foreground: 230 6% 20%;
  
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -65,6 +66,7 @@
     --destructive-foreground: 0 0% 98%;
  
     --ring: 240 4.9% 83.9%;
+    --title-color: 240 9% 75%;
   }
 }
  
@@ -76,18 +78,24 @@
     @apply bg-background text-foreground text-sm;
   }
   h1 {
-    @apply text-2xl;
+    @apply text-3xl font-bold;
   }
   h2 {
+    @apply text-2xl;
+  }
+  h3 {
     @apply text-xl;
+  }
+  h3 a {
+    color: var(--title-color);
   }
   p {
     @apply my-2;
   }
   a {
-    @apply text-blue-600;
+    @apply text-blue-700;
   }
   a:hover {
-   @apply text-blue-400; 
+   @apply text-blue-600; 
   }
 }
