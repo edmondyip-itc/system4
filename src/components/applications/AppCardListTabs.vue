@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, onMounted } from 'vue'
+import { defineProps, watchEffect } from 'vue'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Badge } from '@/components/ui/badge'
 import AppCardList from './AppCardList.vue'
@@ -8,7 +8,9 @@ import { useApp } from '@/stores/app'
 const props = defineProps(['apps'])
 const allApps = props.apps.subSections.map((subSection) => subSection.links).flat()
 const store = useApp()
-store.updateColor = props.apps.colorCode 
+watchEffect(() => {
+  store.updateColor = props.apps.colorCode
+})
 </script>
 
 <template>
