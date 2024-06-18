@@ -1,5 +1,5 @@
 <script setup>
-import ItcLogo from '../icons/ItcLogo.vue'
+import ItcLogo from '../logos/ItcLogo.vue'
 import RandomText from './RandomText.vue'
 </script>
 

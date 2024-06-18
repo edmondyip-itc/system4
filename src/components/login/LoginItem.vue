@@ -34,7 +34,7 @@ const onSubmit = () => {
               <FormItem v-auto-animate>
                 <FormLabel>Username</FormLabel>
                 <FormControl>
-                  <Input type="text" placeholder="shadcn" v-bind="componentField" />
+                  <Input type="text" placeholder="username" v-bind="componentField" />
                 </FormControl>
               </FormItem>
             </FormField>
@@ -42,7 +42,7 @@ const onSubmit = () => {
               <FormItem v-auto-animate>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input type="text" placeholder="shadcn" v-bind="componentField" />
+                  <Input type="password" placeholder="password" v-bind="componentField" />
                 </FormControl>
               </FormItem>
             </FormField>

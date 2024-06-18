@@ -1,5 +1,5 @@
 <script setup>
-import ITCLogo from '@/components/icons/ItcLogo.vue'
+import ITCLogo from '@/components/logos/ItcLogo.vue'
 import MainNav from './MainNav.vue';
 </script>
 
