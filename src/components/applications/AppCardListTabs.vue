@@ -2,35 +2,39 @@
 import { defineProps, watchEffect } from 'vue'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Badge } from '@/components/ui/badge'
-import AppCardList from './AppCardList.vue'
 import { useApp } from '@/stores/app'
+import AppCardList from './AppCardList.vue'
 
-const props = defineProps(['apps'])
-const allApps = props.apps.subSections.map((subSection) => subSection.links).flat()
+const props = defineProps(['apps', 'app'])
 const store = useApp()
 watchEffect(() => {
-  store.updateColor = props.apps.colorCode
+  store.updateColor(props.app.colorCode)
 })
+const appListContent = (tag) => {
+  return props.apps.filter((app) => {
+    return app.tags.includes(tag)
+  })
+}
 </script>
 
 <template>
   <section>
     <Tabs default-value="all">
-      <TabsList class="p-0 h-auto mb-4">
+      <TabsList class="h-auto">
         <TabsTrigger value="all">
           All 
-          <Badge class="text-[10px] p-0 px-1.5 ml-1">{{ allApps.length }}</Badge>
+          <Badge variant="secondary" class="text-[10px] p-0 px-1.5 ml-1">{{ props.apps.length }}</Badge>
         </TabsTrigger>
-        <TabsTrigger v-for="subSection in apps.subSections" :value="subSection.key">
+        <TabsTrigger v-for="subSection in props.app.subSections" :value="subSection.key">
           {{ subSection.label }}
-          <Badge class="text-[10px] p-0 px-1.5 ml-1">{{ subSection.links.length }}</Badge>
+          <Badge variant="secondary" class="text-[10px] p-0 px-1.5 ml-1">{{ appListContent(subSection.key).length }}</Badge>
         </TabsTrigger>
       </TabsList>
       <TabsContent value="all" class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
-        <AppCardList :subSection="allApps" />
+        <AppCardList :apps="Object.values(props.apps)" />
       </TabsContent>
-      <TabsContent v-for="subSection in apps.subSections" :value="subSection.key" class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
-        <AppCardList :subSection="subSection.links" />
+      <TabsContent v-for="subSection in props.app.subSections" :value="subSection.key" class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
+        <AppCardList :apps="appListContent(subSection.key)" />
       </TabsContent>
     </Tabs>
   </section>
