@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue'
 import { RouterLink } from 'vue-router'
 import Logo from '@/components/logos/Logo.vue'
 import { CardHeader, CardTitle, CardDescription } from '@/components/ui/card'

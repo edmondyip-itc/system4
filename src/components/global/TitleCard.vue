@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue';
 import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from '@/components/ui/card'
 
 const props = defineProps(['title', 'description'])

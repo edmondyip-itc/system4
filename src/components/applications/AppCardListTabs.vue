@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, watchEffect } from 'vue'
+import { watchEffect } from 'vue'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Badge } from '@/components/ui/badge'
 import { useApp } from '@/stores/app'

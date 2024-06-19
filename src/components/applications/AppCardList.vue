@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue'
 import { Card } from '@/components/ui/card'
 import AppCard from './AppCard.vue'
 

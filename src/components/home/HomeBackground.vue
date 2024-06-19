@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue'
 import hex2rgba from '@/lib/color'
 
 const props = defineProps(['color'])
