@@ -1,5 +1,4 @@
 <script setup>
-import { computed, defineProps } from 'vue'
 import hex2rgba from '@/lib/color'
 import { useDark } from '@vueuse/core';
 
