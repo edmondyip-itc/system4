@@ -32,13 +32,13 @@ export const tabsTriggertVariants = cva(
     variants: {
       variant: {
         default:
-          "rounded-md bg-muted p-1 text-muted-foreground data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm",
+          "rounded-md bg-muted p-1 text-muted-foreground hover:bg-background hover:text-foreground hover:shadow-sm data-[state=active]:bg-background/80 data-[state=active]:text-foreground data-[state=active]:shadow-sm",
         secondary:
           "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md bg-muted p-1 text-muted-foreground",
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground",
-        big: "rounded-xl text-xl font-normal hover:text-2xl hover:font-bold data-[state=active]:text-2xl data-[state=active]:font-bold data-[state=active]:bg-background/50 data-[state=active]:text-foreground data-[state=active]:shadow-sm",
+        big: "rounded-xl text-foreground text-xl font-normal hover:text-2xl hover:font-bold data-[state=active]:text-3xl data-[state=active]:font-bold data-[state=active]:bg-background/50 data-[state=active]:text-foreground data-[state=active]:shadow-sm",
       },
     },
     defaultVariants: {

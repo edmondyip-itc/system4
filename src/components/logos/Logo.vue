@@ -8,10 +8,10 @@ const bgColor = hex2rgba(props.app.colorCode, 0.4)
 </script>
 
 <template>
-  <div v-if="isDark" class="p-3 rounded-xl bg-white/40">
+  <div v-if="isDark" class="p-3 rounded-xl rounded-tr-none rounded-bl-none bg-white/40">
     <component :is="props.app.logo" class="w-[24px]" :style="{'--logo-color': props.app.colorCode}" />
   </div>
-  <div v-else class="p-3 rounded-xl" :style="{background: bgColor}">
+  <div v-else class="p-3 rounded-xl rounded-tr-none rounded-bl-none" :style="{background: bgColor}">
     <component :is="props.app.logo" class="w-[24px]" :style="{'--logo-color': props.app.colorCode}" />
   </div>
   
