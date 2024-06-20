@@ -1,14 +1,14 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import Logo from '@/components/logos/Logo.vue'
 import { CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+import Logo from '@/components/logos/Logo.vue'
 
 const props = defineProps(['app', 'index'])
 </script>
 
 <template>
-  <CardHeader class="px-4 py-5 z-10">
-    <CardTitle class="flex justify-between items-end">
+  <CardHeader class="px-3 py-4 z-10">
+    <CardTitle class="flex justify-between items-end gap-1">
       <div class="rounded-tl-xl absolute bottom-0 right-0 p-2 flex justify-between" :style="{background: props.app.colorCode}">
         <div class="text-white">{{ (props.index + 1).toString().padStart(2, '0') }}</div>
       </div>

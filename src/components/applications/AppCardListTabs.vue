@@ -25,15 +25,15 @@ const appListContent = (tag) => {
           All 
           <Badge variant="secondary" class="text-[10px] p-0 px-1.5 ml-1">{{ props.apps.length }}</Badge>
         </TabsTrigger>
-        <TabsTrigger v-for="subSection in props.app.subSections" :value="subSection.key">
+        <TabsTrigger v-for="subSection in props.app.subSections" :value="subSection.id" :key="subSection.id">
           {{ subSection.label }}
-          <Badge variant="secondary" class="text-[10px] p-0 px-1.5 ml-1">{{ appListContent(subSection.key).length }}</Badge>
+          <Badge variant="secondary" class="text-[10px] p-0 px-1.5 ml-1">{{ appListContent(subSection.id).length }}</Badge>
         </TabsTrigger>
       </TabsList>
       <TabsContent value="all" class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
         <AppCardList :apps="Object.values(props.apps)" />
       </TabsContent>
-      <TabsContent v-for="subSection in props.app.subSections" :value="subSection.key" class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
+      <TabsContent v-for="subSection in props.app.subSections" :value="subSection.id" :key="subSection.id" class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
         <AppCardList :apps="appListContent(subSection.key)" />
       </TabsContent>
     </Tabs>

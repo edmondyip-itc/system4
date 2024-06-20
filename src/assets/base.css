@@ -38,8 +38,8 @@
   }
  
   .dark {
-    --background: 240 6% 38%;
-    --foreground: 0 3% 77%;
+    --background: 240 2% 25%;
+    --foreground: 0 0% 86%;
  
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;

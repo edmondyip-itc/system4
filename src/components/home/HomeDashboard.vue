@@ -11,7 +11,7 @@ import HomeBackground from './HomeBackground.vue'
 const store = useApp()
 const color = computed(() => hex2rgba(store.appColor,1))
 const applicationsList = (key) => {
-  return allAppTabContent.filter((app) => app.key.match(/^([^-])+/g)[0] === key)
+  return allAppTabContent.filter((app) => app.id.match(/^([^-])+/g)[0] === key)
 }
 
 const productTabs = Object.values(productList)
@@ -24,17 +24,19 @@ const allAppTabContent = Object.values(appList)
       <TabsTrigger value="all" variant="big">
         All
       </TabsTrigger>
-      <TabsTrigger v-for="app in productTabs" :value="app.key" variant="big">
+      <TabsTrigger v-for="app in productTabs" :value="app.id" variant="big">
         {{ app.label }}
       </TabsTrigger>
     </TabsList>
     <TabsContent value="all">
-      All
+      <div class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
+        <AppCardList :apps="allAppTabContent" />
+      </div>
     </TabsContent>
-    <TabsContent v-for="app in productTabs" :value="app.key">
+    <TabsContent v-for="app in productTabs" :value="app.id">
       <AppCardListTabs v-if="app.subSections" :app="app" :apps="applicationsList(app.key)" />
       <div v-else class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
-        <AppCardList :apps="applicationsList(app.key)" />
+        <AppCardList :apps="applicationsList(app.id)" />
       </div>
     </TabsContent>
   </Tabs>
