@@ -22,7 +22,7 @@ watchEffect(() => {
       </slot>
     </main>
   </div>
-  <div id="layout" class="h-screen z-0 grid grid-cols-[200px_minmax(500px,_1fr)] grid-rows-[60px_minmax(500px,_1fr)] gap-8 pr-4" v-else>
+  <div id="layout" class="h-screen z-0 grid grid-cols-[200px_minmax(500px,_1fr)] grid-rows-[100px_minmax(500px,_1fr)] gap-8 pr-4" v-else>
     <SideBar class="row-span-4" />
     <main>
       <PageHeader />
