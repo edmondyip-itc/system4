@@ -16,53 +16,61 @@ const logos = {
   ApexV3CCGroupReport: defineAsyncComponent(() => import ('@/components/logos/apexv3/CCGroupReportLogo.vue')),
   ApexV3GIPricingReport: defineAsyncComponent(() => import ('@/components/logos/apexv3/GIPricingReportLogo.vue')),
   ApexV3GiPricingLegacyReport: defineAsyncComponent(() => import ('@/components/logos/apexv3/GiPricingLegacyReportLogo.vue')),
+  ApexV3UploadDocuments: defineAsyncComponent(() => import ('@/components/logos/apexv3/UploadDocumentsLogo.vue')),
   System4: defineAsyncComponent(() => import ('@/components/logos/System4Logo.vue')),
   System4Dealer: defineAsyncComponent(() => import ('@/components/logos/system4/DealerLogo.vue')),
+  System4Deployments: defineAsyncComponent(() => import ('@/components/logos/system4/DeploymentsLogo.vue')),
   Product: defineAsyncComponent(() => import ('@/components/logos/ProductLogo.vue')),
+  ProductDashboard: defineAsyncComponent(() => import ('@/components/logos/product/DashboardLogo.vue')),
+  ProductChangeRequests: defineAsyncComponent(() => import ('@/components/logos/product/ChangeRequestsLogo.vue')),
+  ProductReports: defineAsyncComponent(() => import ('@/components/logos/product/ReportsLogo.vue')),
+  ProductVaps: defineAsyncComponent(() => import ('@/components/logos/product/VapsLogo.vue')),
+  ProductFinanceProviders: defineAsyncComponent(() => import ('@/components/logos/product/FinanceProvidersLogo.vue')),
+  ProductGapRemoval: defineAsyncComponent(() => import ('@/components/logos/product/GapRemovalLogo.vue')),
 }
 
 export const productList = {
   'apexv3': {
-    key: 'apexv3',
+    id: 'apexv3',
     label: 'Apex V3',
     path: '/apex-v3',
     logo: logos.ApexV3,
     colorCode: '#a11d33',
     subSections: [
       {
-        key: 'management',
+        id: 'management',
         label: 'Management',
       },
       {
-        key: 'registration',
+        id: 'registration',
         label: 'Registration',
       },
       {
-        key: 'report',
+        id: 'report',
         label: 'Report',
       },
       {
-        key: 'support-tools',
+        id: 'support-tools',
         label: 'Support Tools',
       },
     ],
   },
   'system4': {
-    key: 'system4',
+    id: 'system4',
     label: 'System4',
     path: '/system4',
     logo: logos.System4,
     colorCode: '#023e8a',
   },
   'product': {
-    key: 'product',
+    id: 'product',
     label: 'Product',
     path: '/product',
     logo: logos.Product,
-    colorCode: '#76c893',
+    colorCode: '#38B000',
   },
   'monthly-returns': {
-    key: 'monthely-returns',
+    id: 'monthely-returns',
     label: 'Monthly Returns',
     path: '/monthly-returns',
     logo: logos.Product,
@@ -72,7 +80,7 @@ export const productList = {
 
 export const appList = {
   'apev3-dealers': {
-    key: 'apev3-dealers',
+    id: 'apev3-dealers',
     label: 'Dealers',
     description: 'Management Preferences for Dealer',
     path: '/dealers',
@@ -81,7 +89,7 @@ export const appList = {
     colorCode: '#641220'
   },
   'apexv3-sales': {
-    key: 'apexv3-sales',
+    id: 'apexv3-sales',
     label: 'Sales',
     description: 'View all details of Sale',
     path: '/sales',
@@ -90,7 +98,7 @@ export const appList = {
     colorCode: '#6e1423'
   },
   'apexv3-fandi-log': {
-    key: 'apexv3-fandi-log',
+    id: 'apexv3-fandi-log',
     label: 'F & I Submission Logs',
     description: 'View logs of Finance and Insurance Submission',
     path: '/fandi-log',
@@ -99,7 +107,7 @@ export const appList = {
     colorCode: '#85182a'
   },
   'apexv3-dms-intergration': {
-    key: 'apexv3-dms-intergration',
+    id: 'apexv3-dms-intergration',
     label: 'DMS Intergration',
     description: 'Intergration for Dealer Management System',
     path: '/dms-intergration',
@@ -108,7 +116,7 @@ export const appList = {
     colorCode: '#a11d33'
   },
   'apexv3-welcome-pack': {
-    key: 'apexv3-welcome-pack',
+    id: 'apexv3-welcome-pack',
     label: 'Welcome Packs',
     description: 'Manage Welcome Packs for ApexV3',
     path: '/welcome-packs',
@@ -117,7 +125,7 @@ export const appList = {
     colorCode: '#a71e34'
   },
   'apexv3-documents': {
-    key: 'apexv3-documents',
+    id: 'apexv3-documents',
     label: 'Documents',
     description: 'Mangement Documents showing in ApexV3',
     path: '/documents',
@@ -126,7 +134,7 @@ export const appList = {
     colorCode: '#b21e35'
   },
   'apexv3-registration': {
-    key: 'apexv3-registration',
+    id: 'apexv3-registration',
     label: 'Registration Management',
     description: 'Apex V3 Registration Management',
     path: '/registraion',
@@ -135,7 +143,7 @@ export const appList = {
     colorCode: '#bd1f36'
   },
   'apexv3-failed-webhooks': {
-    key: 'apexv3-failed-webhooks',
+    id: 'apexv3-failed-webhooks',
     label: 'Failed Webhooks',
     description: 'Apex V3 Registration Webhooks',
     path: '/registration-webooks',
@@ -144,7 +152,7 @@ export const appList = {
     colorCode: '#c71f37'
   },
   'apexv3-sale-data-group-report': {
-    key: 'apexv3-sale-data-group-report',
+    id: 'apexv3-sale-data-group-report',
     label: 'Sale Data Group Report',
     description: 'Download Report of Sale Data Group',
     path: '/sale-data-group-report',
@@ -153,7 +161,7 @@ export const appList = {
     colorCode: '#ff4800'
   },
   'apexv3-group-supplier-report': {
-    key: 'apexv3-group-supplier-report',
+    id: 'apexv3-group-supplier-report',
     label: 'Group Supplier Report',
     description: 'Download Report of Group Supplier',
     path: '/group-supplier-report',
@@ -162,7 +170,7 @@ export const appList = {
     colorCode: '#ff5400'
   },
   'apev3-cc-providers-report': {
-    key: 'apev3-cc-providers-report',
+    id: 'apev3-cc-providers-report',
     label: 'CC Providers Report',
     description: 'Download Report of CC Providers',
     path: '/cc-providers-report',
@@ -171,7 +179,7 @@ export const appList = {
     colorCode: '#ff6000'
   },
   'apexv3-cc-group-report': {
-    key: 'apexv3-cc-group-report',
+    id: 'apexv3-cc-group-report',
     label: 'CC Group Report',
     description: 'Download Report of CC Group',
     path: '/cc-group-report',
@@ -180,7 +188,7 @@ export const appList = {
     colorCode: '#ff6d00'
   },
   'apexv3-gi-pricing-report': {
-    key: 'apexv3-gi-pricing-report',
+    id: 'apexv3-gi-pricing-report',
     label: 'Average GI Pricing Report',
     description: 'Download Report of Average GI Pricing',
     path: '/gi-pricing-report',
@@ -189,7 +197,7 @@ export const appList = {
     colorCode: '#ff7900'
   },
   'apexv3-gi-pricing-report-legacy': {
-    key: 'apexv3-gi-pricing-report-legacy',
+    id: 'apexv3-gi-pricing-report-legacy',
     label: 'Average GI Pricing Report - Legacy',
     description: 'Download Legacy Report of Average GI Pricing',
     path: '/cc-gi-pricing-legacy-report',
@@ -198,16 +206,16 @@ export const appList = {
     colorCode: '#ff8500'
   },
   'apexv3-upload-documents': {
-    key: 'apexv3-upload-documents',
+    id: 'apexv3-upload-documents',
     label: 'Upload Documents',
     description: 'Apex V3 Upload Documents',
     path: '/registraion',
-    logo: logos.ApexV3Registration,
+    logo: logos.ApexV3UploadDocuments,
     tags: ['apexv3', 'support-tools', 'upload', 'documents'],
     colorCode: '#ffb600'
   },
   'system4-dealer': {
-    key: 'system4-dealer',
+    id: 'system4-dealer',
     label: 'Dealer',
     description: 'Management AP Questionnaire of Dealer',
     path: '/registraion',
@@ -216,64 +224,67 @@ export const appList = {
     colorCode: '#0077b6'
   },
   'system4-deployments': {
-    key: 'system4-deploymentes',
+    id: 'system4-deploymentes',
     label: 'Deployments',
     description: 'Mangement Deployments',
     path: '/depolyments',
-    logo: logos.System4,
+    logo: logos.System4Deployments,
     tags: ['system4', 'deployments'],
     colorCode: '#0096c7'
   },
   'product-dashboard': {
-    key: 'product-dashboard',
+    id: 'product-dashboard',
     label: 'Dashboard',
     description: 'Products Dashboard',
     path: '/dashboard',
-    logo: logos.Product,
+    logo: logos.ProductDashboard,
     tags: ['product', 'management', 'dashboard'],
-    colorCode: '#184e77'
+    colorCode: '#004B23'
   },
   'product-change-requests': {
-    key: 'product-change-requests',
+    id: 'product-change-requests',
     label: 'Change Requests/Drafts',
     description: 'Change Requests of the Product',
     path: '/change-requests',
-    logo: logos.Product,
+    logo: logos.ProductChangeRequests,
     tags: ['product', 'management', 'change request'],
-    colorCode: '#1e6091'
+    colorCode: '#006400'
   },
   'product-reports': {
-    key: 'product-reports',
+    id: 'product-reports',
     label: 'Reports',
     description: 'Products Reports',
     path: '/reports',
-    logo: logos.Product,
+    logo: logos.ProductReports,
     tags: ['product', 'management', 'change request'],
-    colorCode: '#1e6091'
+    colorCode: '#007200'
   },
   'product-vaps': {
-    key: 'product-vaps',
+    id: 'product-vaps',
     label: 'VAPs Management',
     description: 'Value-added product management',
     path: '/vaps',
-    logo: logos.Product,
+    logo: logos.ProductVaps,
     tags: ['product', 'management', 'vaps'],
+    colorCode: '#008000'
   },
   'product-finance-providers': {
-    key: 'product-finance-providers',
+    id: 'product-finance-providers',
     label: 'Finance Providers',
     description: 'Showing Finance Providers of product',
     path: '/finance-providers',
-    logo: logos.Product,
+    logo: logos.ProductFinanceProviders,
     tags: ['product', 'management', 'finance providers'],
+    colorCode: '#38B000'
   },
   'product-gap-removal': {
-    key: 'product-gap-removal',
+    id: 'product-gap-removal',
     label: 'GAP Removal',
     description: 'Remove GAP product',
     path: '/gap-removal',
-    logo: logos.Product,
+    logo: logos.ProductGapRemoval,
     tags: ['product', 'gap', 'removal'],
+    colorCode: '#70E000'
   },
 }
 
