@@ -218,9 +218,9 @@ export const appList = {
     id: 'system4-dealer',
     label: 'Dealer',
     description: 'Management AP Questionnaire of Dealer',
-    path: '/registraion',
+    path: '/dealer',
     logo: logos.System4Dealer,
-    tags: ['system4', 'management', 'questionnaire'],
+    tags: ['system4', 'dealer', 'questionnaire'],
     colorCode: '#0077b6'
   },
   'system4-deployments': {
