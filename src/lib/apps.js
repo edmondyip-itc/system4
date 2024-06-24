@@ -80,7 +80,7 @@ export const productList = {
 
 export const appList = {
   'apev3-dealers': {
-    id: 'apev3-dealers',
+    id: 'apexv3-dealers',
     label: 'Dealers',
     description: 'Management Preferences for Dealer',
     path: '/dealers',
@@ -170,7 +170,7 @@ export const appList = {
     colorCode: '#ff5400'
   },
   'apev3-cc-providers-report': {
-    id: 'apev3-cc-providers-report',
+    id: 'apexv3-cc-providers-report',
     label: 'CC Providers Report',
     description: 'Download Report of CC Providers',
     path: '/cc-providers-report',

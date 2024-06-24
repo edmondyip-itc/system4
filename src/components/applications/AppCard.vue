@@ -12,7 +12,7 @@ const props = defineProps(['app', 'index'])
       <div class="rounded-tl-xl absolute bottom-0 right-0 p-2 flex justify-between" :style="{background: props.app.colorCode}">
         <div class="text-white">{{ (props.index + 1).toString().padStart(2, '0') }}</div>
       </div>
-      <RouterLink :to="props.app.path">
+      <RouterLink :to="app.path">
         {{ props.app.label }}
       </RouterLink>
       <Logo :app="props.app"/>

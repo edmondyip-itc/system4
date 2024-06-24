@@ -34,7 +34,7 @@ const appListContent = (tag) => {
         <AppCardList :apps="Object.values(props.apps)" />
       </TabsContent>
       <TabsContent v-for="subSection in props.app.subSections" :value="subSection.id" :key="subSection.id" class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
-        <AppCardList :apps="appListContent(subSection.key)" />
+        <AppCardList :apps="appListContent(subSection.id)" />
       </TabsContent>
     </Tabs>
   </section>

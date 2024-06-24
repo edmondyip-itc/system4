@@ -10,12 +10,26 @@ import HomeBackground from './HomeBackground.vue'
 
 const store = useApp()
 const color = computed(() => hex2rgba(store.appColor,1))
-const applicationsList = (key) => {
-  return allAppTabContent.filter((app) => app.id.match(/^([^-])+/g)[0] === key)
-}
-
 const productTabs = Object.values(productList)
 const allAppTabContent = Object.values(appList)
+
+const regex = /^([^-])+/g
+const applicationsList = (id) => {
+  const list = allAppTabContent.filter((app) => app.id.match(regex)[0] === id)
+  return applicationsListMapPath(list)
+}
+
+const applicationsListMapPath = (list) => {
+  const mapList = list.map((app) => {
+    const id = app.id.match(regex)[0]
+    const { path, ...apps } = app
+    return {
+      ...apps,
+      path:  `${productList[app.id.match(regex)[0]].path}${app.path}`
+    }
+  })
+  return mapList
+}
 </script>
 
 <template>
@@ -30,11 +44,11 @@ const allAppTabContent = Object.values(appList)
     </TabsList>
     <TabsContent value="all">
       <div class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
-        <AppCardList :apps="allAppTabContent" />
+        <AppCardList :apps="applicationsListMapPath(allAppTabContent)" />
       </div>
     </TabsContent>
     <TabsContent v-for="app in productTabs" :value="app.id">
-      <AppCardListTabs v-if="app.subSections" :app="app" :apps="applicationsList(app.key)" />
+      <AppCardListTabs v-if="app.subSections" :app="app" :apps="applicationsList(app.id)" />
       <div v-else class="grid grid-cols-4 auto-rows-[minmax(120px,_1fr)] gap-4">
         <AppCardList :apps="applicationsList(app.id)" />
       </div>
