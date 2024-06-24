@@ -11,14 +11,18 @@ const router = createRouter({
       component: LoginView
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue')
-    },
-    {
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/:appId/:name',
+      name: 'app',
+      component: () => import('../views/Apps.vue'),
+      props: (route) => ({
+        appId: route.params.appId.replace(/[-]/g, ""),
+        name: route.params.name
+      })
     }
   ]
 })
