@@ -2,29 +2,32 @@
 import { computed, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 import { useLogin } from '@/stores/login'
+import { useSidebar } from '@/stores/app'
 import PageHeader from '@/components/layouts/PageHeader.vue'
 import SideBar from './SideBar.vue'
 
-const store = useLogin()
+const loginStore = useLogin()
+const sideBarStore = useSidebar()
 const router = useRouter()
-const isLogin = computed(() => store.loginState)
+const isLogin = computed(() => loginStore.loginState)
 watchEffect(() => {
   if(!isLogin.value) {
     router.push({ name: 'login' })
   }
 })
+const mainStyle = computed(() => sideBarStore.sidebarIsOpen ? 'pl-[220px]' : 'pl-[100px]')
 </script>
 
 <template>
-  <div id="layout" v-if="!isLogin" class="h-screen bg-primary">
+  <div v-if="!isLogin" id="layout" class="h-screen bg-primary">
     <main>
       <slot>
       </slot>
     </main>
   </div>
-  <div id="layout" class="h-screen z-0 grid grid-cols-[200px_minmax(500px,_1fr)] grid-rows-[100px_minmax(500px,_1fr)] gap-8 pr-4" v-else>
-    <SideBar class="row-span-4" />
-    <main>
+  <div v-else id="layout" class="bg-primary/10 h-fit min-h-screen transition-all" :class="mainStyle">
+    <SideBar />
+    <main class="pr-4">
       <PageHeader />
       <slot></slot>
     </main>
