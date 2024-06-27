@@ -4,22 +4,15 @@ import RandomText from './RandomText.vue'
 </script>
 
 <template>
-  <div id="welcome-message" class="rounded-r-3xl" >
-    <ItcLogo color="white" />
+  <div id="welcome-message" class="flex flex-col items-center justify-between p-9 text-center min-h-full rounded-r-3xl" >
+    <ItcLogo class="w-[100px] h-auto" color="white" />
     <RandomText />
   </div>
 </template>
 
 <style lang="scss" scoped>
   #welcome-message {
-    padding: 50px;
-    text-align: center;
-    min-height: 100%;
     background: url('@/assets/background2.jpg') no-repeat center center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
   }
 </style>
