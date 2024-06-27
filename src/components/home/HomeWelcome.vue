@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+import Button from '../ui/button/Button.vue';
 
 const show = ref(true)
 const close = () => {
@@ -10,21 +10,15 @@ const close = () => {
 </script>
 
 <template>
-  <section v-if="show">
-    <Card class="bg-background/50 relative">
-      <CardHeader>
-        <CardTitle class="text-3xl">
-          Hello Paul! <br/>  Welcome Back to System4! 👋
-        </CardTitle>
-        <CardDescription>
-          <span>Have a nice day at work today</span>
-        </CardDescription>
-        <Icon
-          @click="close"
-          class="text-2xl absolute top-2 right-2 cursor-pointer"
-          icon="ri:close-fill"
-        />
-      </CardHeader>
-    </Card>
+  <section class="h-full relative overflow-hidden rounded-xl bg-background/50" v-if="show">
+    <div class="relative z-20 p-10">
+      <h1>
+        Hello Paul! <br/>  Welcome Back to System4! 👋
+      </h1>
+      <span>Have a nice day at work today</span>
+      <Button @click="close" class="absolute top-0 right-0" variant="small">
+        <Icon icon="ri:close-fill" /> close
+      </Button>
+    </div>
   </section>
 </template>

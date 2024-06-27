@@ -1,17 +1,15 @@
 <script setup>
-import { computed } from 'vue';
-import { useApp } from '@/stores/app'
+import { ref } from 'vue';
 import { productList, appList } from '@/lib/apps'
-import hex2rgba from '@/lib/color';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import AppCardListTabs from '../applications/AppCardListTabs.vue'
 import AppCardList from '../applications/AppCardList.vue';
-import HomeBackground from './HomeBackground.vue'
+import ColorBackground from '@/components/global/ColorBackground.vue'
 
-const store = useApp()
-const color = computed(() => hex2rgba(store.appColor,1))
 const productTabs = Object.values(productList)
 const allAppTabContent = Object.values(appList)
+const defaultColor = '#48cae4'
+const color = ref(defaultColor)
 
 const regex = /^([^-])+/g
 const applicationsList = (id) => {
@@ -30,15 +28,19 @@ const applicationsListMapPath = (list) => {
   })
   return mapList
 }
+
+const updateColor = (colorCode) => {
+  color.value = colorCode
+}
 </script>
 
 <template>
-  <Tabs default-value="all">
+  <Tabs default-value="all" class="relative z-20">
     <TabsList variant="big">
-      <TabsTrigger value="all" variant="big">
+      <TabsTrigger @click="updateColor(defaultColor)" value="all" variant="big">
         All
       </TabsTrigger>
-      <TabsTrigger v-for="app in productTabs" :value="app.id" variant="big">
+      <TabsTrigger @click="updateColor(app.colorCode)" v-for="app in productTabs" :value="app.id" variant="big">
         {{ app.label }}
       </TabsTrigger>
     </TabsList>
@@ -54,5 +56,5 @@ const applicationsListMapPath = (list) => {
       </div>
     </TabsContent>
   </Tabs>
-  <HomeBackground :color="color" />
+  <!-- <ColorBackground :color="color" /> -->
 </template>

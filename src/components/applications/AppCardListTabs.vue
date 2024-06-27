@@ -1,15 +1,9 @@
 <script setup>
-import { watchEffect } from 'vue'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Badge } from '@/components/ui/badge'
-import { useApp } from '@/stores/app'
 import AppCardList from './AppCardList.vue'
 
 const props = defineProps(['apps', 'app'])
-const store = useApp()
-watchEffect(() => {
-  store.updateColor(props.app.colorCode)
-})
 const appListContent = (tag) => {
   return props.apps.filter((app) => {
     return app.tags.includes(tag)
