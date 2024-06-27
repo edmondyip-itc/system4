@@ -35,7 +35,7 @@ export const productList = {
     label: 'Apex V3',
     path: '/apex-v3',
     logo: logos.ApexV3,
-    colorCode: '#a11d33',
+    colorCode: '#b21e35',
     subSections: [
       {
         id: 'management',
@@ -79,7 +79,7 @@ export const productList = {
 }
 
 export const appList = {
-  'apev3-dealers': {
+  'apexv3-dealers': {
     id: 'apexv3-dealers',
     label: 'Dealers',
     description: 'Management Preferences for Dealer',
@@ -169,7 +169,7 @@ export const appList = {
     tags: ['apexv3', 'report', 'group supplier', 'download'],
     colorCode: '#ff5400'
   },
-  'apev3-cc-providers-report': {
+  'apexv3-cc-providers-report': {
     id: 'apexv3-cc-providers-report',
     label: 'CC Providers Report',
     description: 'Download Report of CC Providers',
