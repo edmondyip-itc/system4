@@ -13,17 +13,7 @@ const text = () => {
 </script>
 
 <template>
-  <div class="randomText">
+  <div class="randomText bg-black/40 text-white backdrop-blur-sm p-6 rounded">
     {{ text() }}
   </div>
 </template>
-
-<style lang="scss">
-  .randomText {
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    padding: 1rem;
-    backdrop-filter: blur(2px);
-    border-radius: var(--radius);
-  }
-</style>
