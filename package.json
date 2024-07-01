@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
+    "@tanstack/vue-table": "^8.17.3",
     "@vee-validate/zod": "^4.13.0",
     "@vueuse/core": "^10.10.0",
     "class-variance-authority": "^0.7.0",

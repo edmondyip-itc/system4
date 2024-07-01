@@ -32,7 +32,7 @@ const logos = {
 export const productList = {
   'apexv3': {
     id: 'apexv3',
-    label: 'Apex V3',
+    label: 'ApexV3',
     path: '/apex-v3',
     logo: logos.ApexV3,
     colorCode: '#b21e35',
