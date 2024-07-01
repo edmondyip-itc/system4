@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
-import Button from '../ui/button/Button.vue';
+import { Button } from '@/components/ui/button'
 
 const show = ref(true)
 const close = () => {

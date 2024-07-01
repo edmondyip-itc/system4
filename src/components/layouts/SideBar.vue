@@ -1,7 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
 import ITCLogo from '@/components/logos/ItcLogo.vue'
-import PageFooter from '@/components/layouts/PageFooter.vue'
 import MainNav from './MainNav.vue'
 import { Icon } from '@iconify/vue'
 import { useSidebar } from '@/stores/app'
@@ -28,6 +27,5 @@ const logoStyle = computed(() => store.sidebarIsOpen ? 'w-[70px]' : 'w-[40px]')
       <ITCLogo class="mx-auto transition-all" :class="logoStyle" />
     </div>
     <MainNav />
-    <!-- <PageFooter  /> -->
   </div>
 </template>
